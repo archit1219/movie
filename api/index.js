@@ -47,6 +47,16 @@ app.get('/', (req, res) => res.render('index'));
 // Route: About
 app.get('/about', (req, res) => res.render('about'));
 
+// Route: users
+app.get('/users', function(req, res) {
+  res.send('respond with a resource');
+});
+
+// Route: wrong Route
+app.get('*', function(req, res) {
+  res.render('error', { title: 'Error', message: 'Wrong Route' });
+});
+
 // Route: Data Loaded confirmation
 app.get('/data', (req, res) => res.render('data'));
 
