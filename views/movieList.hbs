@@ -1,0 +1,13 @@
+<h2>Matching Movies</h2>
+{{#each movies}}
+  <div>
+    <strong>Movie ID:</strong> {{this.Movie_ID}}<br>
+    <strong>Title:</strong> {{this.Title}}<br>
+    <strong>Genre:</strong> {{this.Genre}}<br>
+    <strong>Year:</strong> {{this.Year}}<br>
+    <strong>Director:</strong> {{this.Director}}<br>
+  </div>
+  <hr>
+{{else}}
+  <p>No movies found with that title.</p>
+{{/each}}

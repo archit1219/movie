@@ -1,0 +1,25 @@
+<h2>All Movies</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Movie ID</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Genre</th>
+      <th>Director</th>
+      <th>Actors</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each movies}}
+      <tr class="{{#if this.highlight}}highlighted_row{{/if}}">
+        <td>{{this.Movie_ID}}</td>
+        <td>{{this.Title}}</td>
+        <td>{{this.Year}}</td>
+        <td>{{this.Genre}}</td>
+        <td>{{this.Director}}</td>
+        <td>{{this.Actors}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
