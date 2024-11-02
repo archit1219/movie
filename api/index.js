@@ -52,11 +52,6 @@ app.get('/users', function(req, res) {
   res.send('respond with a resource');
 });
 
-// Route: wrong Route
-app.get('*', function(req, res) {
-  res.render('error', { title: 'Error', message: 'Wrong Route' });
-});
-
 // Route: Data Loaded confirmation
 app.get('/data', (req, res) => res.render('data'));
 
@@ -99,6 +94,11 @@ app.get('/highlightedData', (req, res) => {
     highlight: !movie.Metascore || movie.Metascore === 'N/A'
   }));
   res.render('highlightedData', { movies: moviesWithHighlighting });
+});
+
+// Route: wrong Route
+app.get('*', function(req, res) {
+  res.render('error', { title: 'Error', message: 'Wrong Route' });
 });
 
 // Export the app as a serverless function for Vercel
